@@ -1,0 +1,26 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+-fx-background-color: white;
+}
+
+.jfxbuttonlogin{
+    -fx-background-color: #3D8BFA; 
+    -fx-background-radius: 20Px;
+     -fx-fx-border-radius: 20px;
+}
+.jfxbuttonSingup{
+    -fx-background-color: #F8FAFB; 
+    -fx-background-radius: 20Px;
+     -fx-fx-border-radius: 20px;
+}
+.jfxbuttonlogin:hover{
+    -fx-background-color: #FFC461;
+    -fx-text-fill:#3D8BFA;    
+}
+
+.jfxdata{
+    -fx-fill:#000000;
+}

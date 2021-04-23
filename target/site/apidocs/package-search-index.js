@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"com.boot.controller"},{"l":"com.boot.dataaccess"},{"l":"com.boot.model"},{"l":"com.boot.rehabilitacion"}];updateSearchResults();

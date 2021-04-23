@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import io.github.palexdev.materialfx.controls.MFXToggleButton?>
+<?import io.github.palexdev.materialfx.controls.legacy.MFXLegacyComboBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import org.controlsfx.control.textfield.CustomPasswordField?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<AnchorPane id="AnchorPane" prefHeight="473.0" prefWidth="850.0" styleClass="mainFxmlClass" stylesheets="@../css/loginview.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.boot.controller.SingupViewController">
+   <children>
+      <ImageView fitHeight="290.0" fitWidth="454.0" layoutX="5.0" layoutY="58.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/5183184.jpg" />
+         </image></ImageView>
+      <Text layoutX="518.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CREAR UNA NUEVA CUENTA">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Label layoutX="464.0" layoutY="54.0" text="Vamos a configurar su acceso al sistema, seleccione su tipo de ">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <Label layoutX="464.0" layoutY="79.0" text="cuenta e ingrese su informacion personal">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <MFXToggleButton fx:id="btnAcountType" automaticColorAdjustment="true" layoutX="583.0" layoutY="101.0" onAction="#selectType" selected="true" text="Enfermera (o)" unToggleLineColor="#2a64c9">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </MFXToggleButton>
+      <Label layoutX="533.0" layoutY="117.0" text="Médico">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Label>
+      <GridPane layoutX="418.0" layoutY="155.0" prefHeight="136.0" prefWidth="377.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <MFXTextField fx:id="jtxtNombre">
+               <GridPane.margin>
+                  <Insets right="20.0" />
+               </GridPane.margin>
+            </MFXTextField>
+            <MFXTextField fx:id="jtxtApellido" GridPane.columnIndex="1" />
+            <MFXTextField fx:id="jtxtEspecialidad" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets right="10.0" />
+               </GridPane.margin>
+            </MFXTextField>
+            <MFXTextField fx:id="jtxtTelefono" prefWidth="73.0" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets right="50.0" />
+               </GridPane.margin>
+            </MFXTextField>
+            <Label text="Nombre" GridPane.valignment="TOP">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <Label text="Cedula" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="TOP">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label text="Teléfono" GridPane.rowIndex="2" GridPane.valignment="TOP">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label text="Apellido" GridPane.columnIndex="1" GridPane.valignment="TOP">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label text="Genero" GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.valignment="TOP">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <MFXLegacyComboBox fx:id="cmbGenero" lineStrokeWidth="1.0" prefHeight="22.0" prefWidth="137.0" promptText="Seleccionar" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+            <Label fx:id="lblEspecialidad" onMouseEntered="#popOver" text="Especialidad" GridPane.rowIndex="1" GridPane.valignment="TOP">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <MFXTextField fx:id="jtxtCedula" prefWidth="177.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <FontIcon fx:id="lblRestriction" fill="RED" iconColor="#ff0808" iconLiteral="win10-cancel-2" iconSize="18" stroke="#e40d0d" visible="false" wrappingWidth="35.0" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </FontIcon>
+         </children>
+      </GridPane>
+      <Label layoutX="192.0" layoutY="32.0" text="Fecha de ingreso">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <GridPane layoutX="437.0" layoutY="295.0" prefHeight="91.0" prefWidth="340.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <MFXTextField fx:id="jtxtCorreo" />
+            <MFXTextField fx:id="jtxtDireccion" GridPane.rowIndex="1" />
+            <Label text="Correo" GridPane.valignment="TOP">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label text="Dirección Domiciliaria" GridPane.rowIndex="1" GridPane.valignment="TOP">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+      <GridPane fx:id="jtxtConfirmPassword" layoutX="515.0" layoutY="390.0" prefHeight="71.0" prefWidth="219.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <CustomPasswordField fx:id="jtxtPassword" promptText="Password">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </CustomPasswordField>
+            <CustomPasswordField fx:id="jtxtPasswordConfirm" onKeyTyped="#getPasswordConfirm" promptText="Confirmar Password" GridPane.rowIndex="1">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </CustomPasswordField>
+         </children>
+      </GridPane>
+      <FontIcon fx:id="iconConfirm" iconLiteral="win10-checked" iconSize="20" layoutX="488.0" layoutY="450.0" />
+      <FontIcon iconLiteral="win10-lock" iconSize="20" layoutX="488.0" layoutY="413.0" />
+      <GridPane layoutX="85.0" layoutY="428.0" prefHeight="30.0" prefWidth="276.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <MFXButton fx:id="btnCancel" buttonType="RAISED" cancelButton="true" onAction="#cancelVentana" prefHeight="32.0" prefWidth="100.0" styleClass="jfxbuttonSingup" text="Cancelar" />
+            <MFXButton fx:id="btnRegistrer" buttonType="RAISED" onAction="#goRegister" prefHeight="32.0" prefWidth="100.0" styleClass="jfxbuttonlogin" stylesheets="@../css/loginview.css" text="Registrarse" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="RIGHT" />
+         </children>
+      </GridPane>
+      <DatePicker fx:id="jtxtFecha" disable="true" editable="false" layoutX="114.0" layoutY="56.0" prefHeight="24.0" prefWidth="243.0" style="-fx-background-color: transparent;" styleClass="jfxdata" />
+   </children>
+</AnchorPane>

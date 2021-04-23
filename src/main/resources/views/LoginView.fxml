@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<AnchorPane id="AnchorPane" prefHeight="450.0" prefWidth="800.0" styleClass="mainFxmlClass" stylesheets="@../css/loginview.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.boot.controller.LoginViewController">
+  
+   <children>
+      <ImageView fitHeight="387.0" fitWidth="503.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+         <image>
+            <Image url="@../images/5063406.jpg" />
+         </image>
+      </ImageView>
+      <Text layoutX="484.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bienvenido :)">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Text>
+      <Label layoutX="474.0" layoutY="99.0" text="Para mantenerse conectado, inicie sesión con su información ">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <Label layoutX="474.0" layoutY="119.0" text="personal, mediante su nombre de usuario y contraseña">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <FontIcon fill="#eec008" iconColor="#f8cc06" iconLiteral="fa-bell" iconSize="15" layoutX="758.0" layoutY="133.0" stroke="#141414" />
+      <GridPane layoutX="473.0" layoutY="168.0" prefHeight="90.0" prefWidth="308.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="148.0" minWidth="10.0" prefWidth="38.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="271.0" minWidth="10.0" prefWidth="270.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TextField fx:id="jtxtUsername" promptText="User Name" style="-fx-background-color: transparent;" GridPane.columnIndex="1">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </TextField>
+            <PasswordField fx:id="jtxtPassword" promptText="Password" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <FontIcon iconColor="#797777" iconLiteral="fa-user-o" iconSize="20" wrappingWidth="23.14285659790039" GridPane.halignment="RIGHT" />
+            <FontIcon iconColor="#797777" iconLiteral="win10-lock-2" iconSize="25" wrappingWidth="27.0" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+      <GridPane layoutX="484.0" layoutY="311.0" prefHeight="56.0" prefWidth="308.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <MFXButton fx:id="btnLogin" onAction="#Login" prefHeight="40.0" prefWidth="135.0" styleClass="jfxbuttonlogin" text="Iniciar Sesión" textFill="WHITE" />
+            <MFXButton fx:id="btnCreateAcount" onAction="#CreateAcount" prefHeight="40.0" prefWidth="135.0" styleClass="jfxbuttonSingup" text="Crear Cuenta" GridPane.columnIndex="1" />
+         </children>
+      </GridPane>
+      <Label layoutX="637.0" layoutY="258.0" text="¿Olvidaste tu ">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <Label fx:id="btnClave" layoutX="707.0" layoutY="258.0" style="-fx-font-weight: bold;" text="contraseña">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <Label layoutX="770.0" layoutY="257.0" text="?" />
+      <ImageView fitHeight="73.0" fitWidth="199.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Logo2.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="26.0" layoutY="420.0">
+         <font>
+            <Font size="9.0" />
+         </font>
+      </Label>
+      <Label layoutX="26.0" layoutY="412.0" text="Copyright (c) 2021 Jhonatan Montenegro">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
